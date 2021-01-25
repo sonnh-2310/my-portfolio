@@ -5,28 +5,21 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
+    "paths": {
+      "@app/*": ["src/*"],
+      "@auth/*": ["src/modules/auth/*"],
+      "@website/*": ["src/modules/website/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": false,
-    "target": "ESNext",
-    "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true
+    "target": "ESNext"
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
